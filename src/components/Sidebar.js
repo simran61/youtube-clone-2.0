@@ -7,7 +7,7 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="p-5 border-r-2 w-52 h-[87.5vh]">
+    <div className="p-5 h-[88vh] basis-[15%]">
       <ul>
         <li className="py-1.5 flex items-center">
           <img
