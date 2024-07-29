@@ -24,4 +24,16 @@ const VideoCard = ({ info }) => {
   );
 };
 
+export const AdVideoCard = ({ info }) => {
+  return (
+    <div>
+      <VideoCard info={info} />
+      <div className="-mt-5">
+        <span className="font-bold ml-14 pr-2 text-sm">Sponsered:</span>
+        <span className="text-sm text-gray-600">Gov of India</span>
+      </div>
+    </div>
+  );
+};
+
 export default VideoCard;
