@@ -5,6 +5,8 @@ import { YOUTUBE_SEARCH_API } from "../utils/constants";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => getSearchSuggestions(), 200);
@@ -18,7 +20,8 @@ const Head = () => {
     console.log("API CALL-" + searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
-    // console.log(json[1]);
+    setSuggestions(json[1]);
+    console.log(json[1]);
   };
 
   const dispatch = useDispatch();
@@ -43,21 +46,44 @@ const Head = () => {
         />
       </div>
       <div className="px-10 flex items-center">
-        <div className="flex">
-          <input
-            placeholder="Search"
-            className="px-5 py-1.5 w-[30rem] border border-gray-400 rounded-l-full"
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <button className="border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100">
-            <img
-              className="h-4"
-              src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png"
-              alt="search"
+        <div>
+          <div className="flex">
+            <input
+              placeholder="Search"
+              className="px-5 py-1.5 w-[30rem] border border-gray-400 rounded-l-full"
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setShowSuggestions(true)}
+              onBlur={() => setShowSuggestions(false)}
             />
-          </button>
+            <button className="border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100">
+              <img
+                className="h-4"
+                src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png"
+                alt="search"
+              />
+            </button>
+          </div>
+          {showSuggestions && (
+            <div className="fixed bg-white p-2 w-[30rem] rounded-lg shadow-md border border-gray-100">
+              <ul>
+                {suggestions.map((s) => (
+                  <li
+                    key={s}
+                    className="flex items-center font-semibold py-1.5 px-3 rounded-md hover:bg-gray-100"
+                  >
+                    <img
+                      className="h-3 mr-2"
+                      src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png"
+                      alt="search"
+                    />
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <div className="mx-4 bg-gray-200 h-11 w-11 flex items-center justify-center rounded-full">
           <img
