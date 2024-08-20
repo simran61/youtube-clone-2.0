@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <div className="p-5 h-[88vh] basis-[15%]">
       <ul>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -17,7 +17,7 @@ const Sidebar = () => {
           />
           Home
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -25,7 +25,7 @@ const Sidebar = () => {
           />
           Shorts
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -44,7 +44,7 @@ const Sidebar = () => {
         />
       </div>
       <ul>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -52,7 +52,7 @@ const Sidebar = () => {
           />
           Your channel
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -60,7 +60,7 @@ const Sidebar = () => {
           />
           History
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -68,7 +68,7 @@ const Sidebar = () => {
           />
           Playlists
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -76,7 +76,7 @@ const Sidebar = () => {
           />
           Your videos
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -84,7 +84,7 @@ const Sidebar = () => {
           />
           Watch later
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-5 mr-2"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Video_camera_icon.svg/1200px-Video_camera_icon.svg.png"
@@ -96,7 +96,7 @@ const Sidebar = () => {
       <hr className="my-4" />
       <h1 className="font-bold">Subscriptions</h1>
       <ul>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-7 mr-2"
             src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
@@ -104,7 +104,7 @@ const Sidebar = () => {
           />
           Akshay Saini
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-7 mr-2"
             src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
@@ -112,7 +112,7 @@ const Sidebar = () => {
           />
           Technical Guruji
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-7 mr-2"
             src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
@@ -120,7 +120,7 @@ const Sidebar = () => {
           />
           T Series
         </li>
-        <li className="py-1.5 flex items-center">
+        <li className="text-sm py-1.5 flex items-center">
           <img
             className="h-7 mr-2"
             src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
