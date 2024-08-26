@@ -11,13 +11,14 @@ const SuggestedVideos = ({ videoData }) => {
   console.log(videoTitle);
 
   useEffect(() => {
-    suggestedData();
-  }, []);
+    if (videoTitle) suggestedData(videoTitle);
+  }, [videoTitle]);
 
-  const suggestedData = async () => {
-    const data = await fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=${videoTitle}%2023&key=${GOOGLE_API_KEY}`
-    );
+  const suggestedData = async (videoTitle) => {
+    const suggestedUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=${encodeURIComponent(
+      videoTitle
+    )}%2023&key=${GOOGLE_API_KEY}`;
+    const data = await fetch(suggestedUrl);
     const json = await data.json();
     setSuggestedVd(json.items);
   };
@@ -59,7 +60,7 @@ const SuggestedVideos = ({ videoData }) => {
       </div>
 
       <div className="w-full">
-        {suggestedVd.map((video) => (
+        {suggestedVd?.map((video) => (
           <Link to={"/watch?v=" + video.id.videoId} key={video.id.videoId}>
             <div className="my-4 flex">
               <img
