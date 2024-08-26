@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const AdVideo = () => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+
   return (
     <Link to="https://www.youtube.com/watch?v=5XxIwPKMlek">
-      <div className="mx-2 my-4 w-[296px]">
+      <div className={`mx-2 my-6 ${isMenuOpen ? "w-[296px]" : "w-[267px]"}`}>
         <img
-          className="rounded-lg"
+          className="rounded-xl hover:rounded-none"
           src="https://i.ytimg.com/vi/QVNpTiFsGvw/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZfV6zBC_usOgeX4DTeNyfM56fJA"
           alt=""
         />

@@ -3,8 +3,10 @@ import { YOUTUBE_VIDEOS_API } from "../utils/constants";
 import VideoCard, { AdVideoCard } from "./VideoCard";
 import { Link } from "react-router-dom";
 import AdVideo from "./AdVideo";
+import { useSelector } from "react-redux";
 
 const VideoContainer = () => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     getVideos();
@@ -18,7 +20,11 @@ const VideoContainer = () => {
   };
 
   return (
-    <div className="flex flex-wrap">
+    <div
+      className={`overflow-hidden w-full mt-14 grid grid-flow-row ${
+        isMenuOpen ? "grid-cols-4" : "grid-cols-5"
+      }`}
+    >
       {/* {videos[29] && <AdVideoCard info={videos[29]} />} */}
       <AdVideo />
       {videos.map((video) => (

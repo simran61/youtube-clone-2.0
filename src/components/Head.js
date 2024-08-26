@@ -45,7 +45,7 @@ const Head = () => {
   };
 
   return (
-    <div className="flex justify-between items-center px-5 py-2">
+    <div className="flex justify-between items-center px-5 py-2 fixed w-full bg-white">
       <div className="flex items-center">
         <svg
           onClick={() => toggleMenuHandler()}
@@ -60,7 +60,7 @@ const Head = () => {
           <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
         </svg>
         <img
-          className="h-5 mx-5"
+          className="h-5 mx-7"
           alt="youtube-logo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/2560px-YouTube_Logo_2017.svg.png"
         />

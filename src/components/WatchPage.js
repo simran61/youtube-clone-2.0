@@ -44,7 +44,7 @@ const WatchPage = () => {
   console.log(channelInfo);
 
   return (
-    <div className="flex justify-between mx-24 my-8">
+    <div className="flex justify-between mt-[76px] mx-[90px]">
       <div className="watch-page left mr-6">
         <div className="video-deatils">
           <iframe

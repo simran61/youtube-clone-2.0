@@ -1,7 +1,9 @@
 import React from "react";
 import moment from "moment";
+import { useSelector } from "react-redux";
 
 const VideoCard = ({ info }) => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   console.log(info);
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails, publishedAt } = snippet;
@@ -16,8 +18,14 @@ const VideoCard = ({ info }) => {
   const publishedDate = moment(publishedAt).startOf("hour").fromNow();
 
   return (
-    <div className="mx-2 my-4 w-[296px]">
-      <img className="rounded-lg" src={thumbnails.medium.url} alt="" />
+    <div
+      className={`mx-2 my-6 mb-12 ${isMenuOpen ? "w-[296px]" : "w-[267px]"}`}
+    >
+      <img
+        className="rounded-xl hover:rounded-none"
+        src={thumbnails.medium.url}
+        alt=""
+      />
       <div className="flex my-2">
         <img
           className="h-8 mr-2"
@@ -25,7 +33,7 @@ const VideoCard = ({ info }) => {
           src="https://i.pinimg.com/564x/20/05/e2/2005e27a39fa5f6d97b2e0a95233b2be.jpg"
         />
         <div>
-          <h2 className="mb-2 font-semibold text-ellipsis overflow-hidden line-clamp-2">
+          <h2 className="mb-1 font-semibold text-ellipsis overflow-hidden line-clamp-2">
             {title}
           </h2>
           <h3 className="text-[#606060] text-sm">{channelTitle}</h3>
