@@ -43,7 +43,6 @@ const WatchPage = () => {
     const channelData = await channelDetails.json();
     setChannelInfo(channelData.items);
   };
-  console.log(channelInfo);
 
   return (
     <div className="flex justify-between mt-[76px] mx-[90px]">
@@ -68,7 +67,7 @@ const WatchPage = () => {
               <div className="flex items-center">
                 <img
                   className="rounded-full w-10 h-10"
-                  src="https://yt3.ggpht.com/CExws1pYCJOMWoE_aPHSwr-nLM7YHbZWF6a4fxwX5hYPLKJi8A4aUoqhRk-23WLkiAyj6bCBUw=s88-c-k-c0x00ffffff-no-rj"
+                  src={channelInfo[0]?.snippet?.thumbnails?.default?.url}
                   alt=""
                 />
                 <div className="ml-3">
@@ -76,7 +75,7 @@ const WatchPage = () => {
                     {videoData[0]?.snippet?.channelTitle}
                   </h3>
                   <span className="text-xs dark:text-[#aaaaaa]">
-                    3.12k subscribers
+                    {channelInfo[0]?.statistics?.subscriberCount} subscribers
                   </span>
                 </div>
                 <button className="bg-black text-white font-semibold py-1.5 px-4 rounded-3xl mx-4 dark:bg-[#f1f1f1] dark:text-black">
@@ -231,7 +230,13 @@ const WatchPage = () => {
                 {videoData[0]?.snippet?.publishedAt}
               </span>
 
-              <p>{videoData[0]?.snippet?.localized?.description}</p>
+              <div>
+                {videoData[0]?.snippet?.localized?.description
+                  .split("\n")
+                  .map((desc, index) => (
+                    <p key={index}>{desc}</p>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
