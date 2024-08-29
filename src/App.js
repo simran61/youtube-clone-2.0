@@ -6,6 +6,7 @@ import store from "./utils/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
+import { useState } from "react";
 
 const appRouter = createBrowserRouter([
   {
@@ -25,9 +26,20 @@ const appRouter = createBrowserRouter([
 ]);
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <Provider store={store}>
-      <div>
+      <div className={`${darkMode && "dark"}`}>
+        <div className="">
+          <label class="switch">
+            <input type="checkbox" onChange={toggleDarkMode} />
+            <span class="slider round"></span>
+          </label>
+        </div>
         <Head />
         <RouterProvider router={appRouter} />
         <Body />

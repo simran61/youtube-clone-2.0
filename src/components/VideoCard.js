@@ -28,20 +28,24 @@ const VideoCard = ({ info }) => {
       />
       <div className="flex my-2">
         <img
-          className="h-8 mr-2"
+          className="h-8 mr-2 rounded-full"
           alt="user"
           src="https://i.pinimg.com/564x/20/05/e2/2005e27a39fa5f6d97b2e0a95233b2be.jpg"
         />
         <div>
-          <h2 className="mb-1 font-semibold text-ellipsis overflow-hidden line-clamp-2">
+          <h2 className="mb-1 font-semibold text-ellipsis overflow-hidden line-clamp-2 dark:text-white">
             {title}
           </h2>
-          <h3 className="text-[#606060] text-sm">{channelTitle}</h3>
+          <h3 className="text-[#606060] text-sm dark:text-[#aaaaaa]">
+            {channelTitle}
+          </h3>
           <div>
-            <span className="text-[#606060] text-sm">
+            <span className="text-[#606060] text-sm dark:text-[#aaaaaa]">
               {calculateViews(viewCount)} views •{" "}
             </span>
-            <span className="text-[#606060] text-sm">{publishedDate}</span>
+            <span className="text-[#606060] text-sm dark:text-[#aaaaaa]">
+              {publishedDate}
+            </span>
           </div>
         </div>
         <div className="h-4">

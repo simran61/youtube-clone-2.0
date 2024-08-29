@@ -21,12 +21,16 @@ const AdVideo = () => {
               src="https://yt3.ggpht.com/ioD47o1fxrL6SaynAejO20wJ4o_8xQn8K4cWvnyCpahR3X8IifAFdVm8xsEN4oODRddMonkagw=s88-c-k-c0x00ffffff-no-rj"
             />
             <div>
-              <h2 className="font-semibold text-ellipsis overflow-hidden line-clamp-2">
+              <h2 className="font-semibold text-ellipsis overflow-hidden line-clamp-2 dark:text-white">
                 For web pros
               </h2>
               <div>
-                <span className="font-semibold text-sm">Sponsered • </span>
-                <span className="text-[#606060] text-sm">Wix Studio</span>
+                <span className="font-semibold text-sm dark:text-white">
+                  Sponsered •{" "}
+                </span>
+                <span className="text-[#606060] text-sm dark:text-[#aaaaaa]">
+                  Wix Studio
+                </span>
               </div>
             </div>
           </div>
@@ -43,10 +47,10 @@ const AdVideo = () => {
           </svg>
         </div>
         <div className="flex justify-between py-1">
-          <button className="w-[142px] p-2 rounded-3xl border text-blue-600 font-medium text-sm">
+          <button className="w-[142px] p-2 rounded-3xl border text-[#3EA6FF] font-medium text-sm dark:border-zinc-700">
             Watch
           </button>
-          <button className="w-[142px] p-2 rounded-3xl bg-blue-100 text-blue-600 font-medium text-sm">
+          <button className="w-[142px] p-2 rounded-3xl bg-blue-100 text-[#3EA6FF] font-medium text-sm dark:bg-[#263850]">
             Create Now
           </button>
         </div>

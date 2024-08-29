@@ -2,7 +2,7 @@ import React from "react";
 
 const AdContainer = () => {
   return (
-    <div className="border rounded-xl w-[402px] h-[139px]">
+    <div className="border rounded-xl w-[402px] h-[139px] dark:border-zinc-700">
       <img
         className="rounded-t-xl"
         src="https://yt3.ggpht.com/8GMdBOhDKTRWycnl1PKXWPq1BO9lQG-FMv8w2TIqEmAA9smpad9VbISrldyUWO08X3b0J-wr9w=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
@@ -11,15 +11,18 @@ const AdContainer = () => {
       <div className="flex justify-between items-center ml-4 my-3">
         <div className="flex items-center">
           <img
-            className="w-9 h-9"
+            className="w-9 h-9 rounded-full"
             src="https://yt3.ggpht.com/mNNzuyntxCDSt_sd6j4bGAwfNbrH-neUe4HlSw4fsK7pGWMr7r0R8_HjEPR17Cufi6AaPggr=s88-c-k-c0x00ffffff-no-rj"
             alt="adChannel"
           />
-          <div className="mx-4">
+          <div className="mx-4 dark:text-white">
             <h3>NIVEA India</h3>
             <div className="text-xs">
               <span className="font-bold">Sponsered</span>
-              <span className="text-[#606060]"> • www.nive.in</span>
+              <span className="text-[#606060] dark:text-[#aaaaaa]">
+                {" "}
+                • www.nive.in
+              </span>
             </div>
           </div>
         </div>

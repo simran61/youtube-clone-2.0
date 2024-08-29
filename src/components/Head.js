@@ -45,7 +45,7 @@ const Head = () => {
   };
 
   return (
-    <div className="flex justify-between items-center px-5 py-2 fixed w-full bg-white">
+    <div className="flex justify-between items-center px-5 py-2 fixed w-full bg-white dark:bg-[#0F0F0F]">
       <div className="flex items-center">
         <svg
           onClick={() => toggleMenuHandler()}
@@ -70,14 +70,14 @@ const Head = () => {
           <div className="flex h-10">
             <input
               placeholder="Search"
-              className="px-5 py-1.5 w-[536px] border border-gray-300 rounded-l-full"
+              className="px-5 py-1.5 w-[536px] border border-gray-300 rounded-l-full dark:bg-[#121212] dark:border-zinc-800"
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setShowSuggestions(true)}
               onBlur={() => setShowSuggestions(false)}
             />
-            <button className="border w-16 border-gray-300 px-5 py-2 rounded-r-full bg-gray-50">
+            <button className="border w-16 border-gray-300 px-5 py-2 rounded-r-full bg-gray-50 dark:bg-[#ffffff14] dark:border-zinc-700">
               <img
                 className="h-5"
                 src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-512.png"
@@ -105,7 +105,7 @@ const Head = () => {
             </div>
           )}
         </div>
-        <div className="mx-4 bg-gray-100 h-10 w-10 flex items-center justify-center rounded-full hover:bg-gray-200">
+        <div className="mx-4 bg-gray-100 h-10 w-10 flex items-center justify-center rounded-full hover:bg-gray-200 dark:bg-[#ffffff14]">
           <img
             className="h-6 mix-blend-multiply"
             src="https://i.pinimg.com/564x/f7/26/64/f726649c44ad675da83a91fe99bf1955.jpg"

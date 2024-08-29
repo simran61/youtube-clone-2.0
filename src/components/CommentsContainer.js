@@ -104,8 +104,8 @@ const CommentsList = ({ comments }) => {
 const CommentsContainer = ({ videoData }) => {
   return (
     <div className="m-2 p-2">
-      <h1 className="text-2xl font-bold">
-        Comments:{videoData[0]?.statistics?.commentCount}
+      <h1 className="text-xl font-bold dark:text-[#f1f1f1]">
+        {videoData[0]?.statistics?.commentCount} Comments
       </h1>
       <CommentsList comments={commentsData} />
     </div>

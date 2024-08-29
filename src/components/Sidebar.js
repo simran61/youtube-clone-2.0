@@ -7,9 +7,9 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="side-bar p-3 h-[calc(100vh-56px)] fixed bg-white overflow-hidden mt-14">
-      <ul>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center font-semibold bg-gray-100 rounded-lg">
+    <div className="side-bar p-3 h-[calc(100vh-56px)] fixed bg-white overflow-hidden mt-14 dark:bg-[#0F0F0F]">
+      <ul className="dark:text-[#f1f1f1]">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center font-semibold bg-gray-100 rounded-lg dark:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ const Sidebar = () => {
           </svg>
           Home
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const Sidebar = () => {
           </svg>
           Shorts
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -56,15 +56,15 @@ const Sidebar = () => {
       </ul>
       <hr className="my-3.5" />
       <div className="flex items-center px-3 h-10">
-        <h1 className="font-semibold">You</h1>
+        <h1 className="font-semibold dark:text-[#f1f1f1]">You</h1>
         <img
           className="h-2.5 ml-3"
           src="https://cdn-icons-png.flaticon.com/512/32/32213.png"
           alt=""
         />
       </div>
-      <ul>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+      <ul className="dark:text-[#f1f1f1]">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Sidebar = () => {
           </svg>
           Your channel
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ const Sidebar = () => {
           </svg>
           History
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ const Sidebar = () => {
           </svg>
           Playlists
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ const Sidebar = () => {
           </svg>
           Your videos
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +137,7 @@ const Sidebar = () => {
           </svg>
           Watch later
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -155,9 +155,11 @@ const Sidebar = () => {
       </ul>
       <hr className="my-4" />
 
-      <h1 className="font-semibold px-3 py-1">Subscriptions</h1>
-      <ul>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+      <h1 className="font-semibold px-3 py-1 dark:text-[#f1f1f1]">
+        Subscriptions
+      </h1>
+      <ul className="dark:text-[#f1f1f1]">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <img
             className="h-7 rounded-full mr-6"
             src="https://yt3.ggpht.com/ytc/AIdro_md2CfeGP7cDguRmrpRdM3a1r_gOniMzennD6141VLFw70=s88-c-k-c0x00ffffff-no-rj"
@@ -165,7 +167,7 @@ const Sidebar = () => {
           />
           Akshay Saini
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <img
             className="h-7 rounded-full mr-6"
             src="https://yt3.ggpht.com/ytc/AIdro_l_j492nkzqD1_nA9DqHl-r4L5pe9AI_jzhy9BX-af45JI=s88-c-k-c0x00ffffff-no-rj"
@@ -173,7 +175,7 @@ const Sidebar = () => {
           />
           Tharun Speaks
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <img
             className="h-7 rounded-full mr-6"
             src="https://yt3.ggpht.com/ytc/AIdro_lGRc-05M2OoE1ejQdxeFhyP7OkJg9h4Y-7CK_5je3QqFI=s88-c-k-c0x00ffffff-no-rj"
@@ -181,7 +183,7 @@ const Sidebar = () => {
           />
           freeCodeCamp
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <img
             className="h-7 rounded-full mr-6"
             src="https://yt3.ggpht.com/VLOvpKYxd_ZTrjrorHo5VkqaO0lM1Zs2Zbe-Nrfx7UkWnUGKNbpgEcDxhSjDWS4UONdtyKddLQ=s88-c-k-c0x00ffffff-no-rj"
@@ -189,7 +191,7 @@ const Sidebar = () => {
           />
           Hitesh Choudhary
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <img
             className="h-7 rounded-full mr-6"
             src="https://yt3.ggpht.com/ytc/AIdro_k2O-2O1fL6S58poofnawszoBfzsl1YBpciM9BDhupgLToC=s88-c-k-c0x00ffffff-no-rj"
@@ -197,7 +199,7 @@ const Sidebar = () => {
           />
           Nishant Chahar
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <img
             className="h-7 rounded-full mr-6"
             src="https://yt3.ggpht.com/Xxr9GvsePwYQ3b8LYaPjTmSxtbQIHzjG2X-Z_VqzSxD9lPhAByovkFCrAguwViYM9PyXuFAV=s88-c-k-c0x00ffffff-no-rj"
@@ -205,7 +207,7 @@ const Sidebar = () => {
           />
           Sasha Alex Sloan
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <img
             className="h-7 rounded-full mr-6"
             src="https://yt3.ggpht.com/ytc/AIdro_mKzklyPPhghBJQH5H3HpZ108YcE618DBRLAvRUD1AjKNw=s88-c-k-c0x00ffffff-no-rj"
@@ -213,7 +215,7 @@ const Sidebar = () => {
           />
           Fireship
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -231,8 +233,8 @@ const Sidebar = () => {
 
       <hr className="my-3.5" />
       <h1 className="font-semibold px-3 py-1">Explore</h1>
-      <ul>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+      <ul className="dark:text-[#f1f1f1]">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +249,7 @@ const Sidebar = () => {
           </svg>
           Trending
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +263,7 @@ const Sidebar = () => {
           </svg>
           Shopping
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +278,7 @@ const Sidebar = () => {
           </svg>
           Music
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +292,7 @@ const Sidebar = () => {
           </svg>
           Movies
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -307,7 +309,7 @@ const Sidebar = () => {
           </svg>
           Live
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -322,7 +324,7 @@ const Sidebar = () => {
           </svg>
           Gaming
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -337,7 +339,7 @@ const Sidebar = () => {
           </svg>
           News
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -351,7 +353,7 @@ const Sidebar = () => {
           </svg>
           Sports
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +368,7 @@ const Sidebar = () => {
           </svg>
           Courses
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -380,7 +382,7 @@ const Sidebar = () => {
           </svg>
           Fashion & Beauty
         </li>
-        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg">
+        <li className="text-sm px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
           <svg
             className="mr-6"
             xmlns="http://www.w3.org/2000/svg"

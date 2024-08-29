@@ -42,13 +42,13 @@ const SuggestedVideos = ({ videoData }) => {
       <AdContainer />
       <div className="my-4 flex items-center justify-between">
         <div>
-          <button className="px-5 py-1 mr-2 bg-black text-white rounded-lg">
+          <button className="text-sm px-3 py-1.5 mr-2 bg-black text-white rounded-lg dark:bg-[#f1f1f1] dark:text-black">
             All
           </button>
-          <button className="px-5 py-1 mr-2 bg-gray-200 rounded-lg">
+          <button className="text-sm px-3 py-1.5 mr-2 bg-gray-200 rounded-lg dark:bg-[#ffffff1A] dark:text-white">
             From the series
           </button>
-          <button className="px-5 py-1 mr-2 bg-gray-200 rounded-lg">
+          <button className="text-sm px-3 py-1.5 mr-2 bg-gray-200 rounded-lg dark:bg-[#ffffff1A] dark:text-white">
             JavaScript
           </button>
         </div>
@@ -70,15 +70,15 @@ const SuggestedVideos = ({ videoData }) => {
               />
 
               <div className="ml-3">
-                <h2 className="text-sm font-semibold overflow-hidden text-ellipsis line-clamp-2">
+                <h2 className="text-sm font-semibold overflow-hidden text-ellipsis line-clamp-2 dark:text-white">
                   {video.snippet.title}
                 </h2>
-                <p className="text-xs text-[#606060] mt-2">
+                <p className="text-xs text-[#606060] mt-2 dark:text-[#aaaaaa]">
                   {video.snippet.channelTitle}
                 </p>
                 <div>
                   {/* <span className="text-[#606060] text-xs">{calculateViews(viewCount)} views •{" "}</span> */}
-                  <span className="text-[#606060] text-xs">
+                  <span className="text-[#606060] text-xs dark:text-[#aaaaaa]">
                     {moment(video.snippet.publishedAt)
                       .startOf("hour")
                       .fromNow()}

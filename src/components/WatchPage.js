@@ -59,7 +59,7 @@ const WatchPage = () => {
             allowFullScreen
           ></iframe>
           <div className="videodetails">
-            <h1 className="font-bold text-xl my-3">
+            <h1 className="font-bold text-xl my-3 dark:text-[#f1f1f1]">
               {videoData[0]?.snippet?.localized?.title}
             </h1>
             <div className="flex justify-between">
@@ -70,26 +70,30 @@ const WatchPage = () => {
                   alt=""
                 />
                 <div className="ml-3">
-                  <h3 className="font-bold -mb-1">
+                  <h3 className="font-bold -mb-1 dark:text-[#f1f1f1]">
                     {videoData[0]?.snippet?.channelTitle}
                   </h3>
-                  <span className="text-xs">3.12k subscribers</span>
+                  <span className="text-xs dark:text-[#aaaaaa]">
+                    3.12k subscribers
+                  </span>
                 </div>
-                <button className="bg-black text-white font-semibold py-1.5 px-4 rounded-3xl mx-4">
+                <button className="bg-black text-white font-semibold py-1.5 px-4 rounded-3xl mx-4 dark:bg-[#f1f1f1] dark:text-black">
                   Subscribe
                 </button>
               </div>
               <div className="flex items-center">
-                <div className="flex bg-gray-100 rounded-3xl px-4 py-1 mx-2">
+                <div className="flex bg-gray-100 rounded-3xl px-4 py-1 mx-2 dark:bg-[#272727] dark:text-white">
                   <button className="flex items-center mr-2">
                     <img
                       className="h-7 mix-blend-multiply"
                       src="https://static.vecteezy.com/system/resources/thumbnails/000/423/558/small/Multimedia__287_29.jpg"
                       alt=""
                     />
-                    <span>{videoData[0]?.statistics?.likeCount}</span>
+                    <span className="mx-2">
+                      {videoData[0]?.statistics?.likeCount}
+                    </span>
                   </button>
-                  <button className="pl-2 border-l-2">
+                  <button className="pl-2 border-l-2 dark:border-zinc-700">
                     <img
                       className="rotate-180 h-7 mix-blend-multiply"
                       src="https://static.vecteezy.com/system/resources/thumbnails/000/423/558/small/Multimedia__287_29.jpg"
@@ -97,7 +101,7 @@ const WatchPage = () => {
                     />
                   </button>
                 </div>
-                <button className="flex items-center bg-gray-100 rounded-3xl px-4 py-1.5 mx-2">
+                <button className="flex items-center bg-gray-100 rounded-3xl px-4 py-1.5 mx-2 dark:bg-[#272727] dark:text-white">
                   <img
                     className="h-4 mr-2"
                     src="https://cdn-icons-png.flaticon.com/256/222/222322.png"
@@ -105,7 +109,7 @@ const WatchPage = () => {
                   />
                   <span>Share</span>
                 </button>
-                <button className="flex items-center bg-gray-100 rounded-3xl px-4 py-1.5 mx-2">
+                <button className="flex items-center bg-gray-100 rounded-3xl px-4 py-1.5 mx-2 dark:bg-[#272727] dark:text-white">
                   <img
                     className="h-4 mr-2"
                     src="https://i.pinimg.com/originals/b7/70/58/b770587b01d6ca8fdd230bf7050b5689.png"
@@ -113,7 +117,7 @@ const WatchPage = () => {
                   />
                   <span>Download</span>
                 </button>
-                <button className="bg-gray-100 rounded-3xl p-2 mx-2">
+                <button className="bg-gray-100 rounded-3xl p-2 mx-2 dark:bg-[#272727]">
                   <img
                     className="h-4"
                     src="https://www.svgrepo.com/show/345223/three-dots-vertical.svg"
@@ -123,10 +127,14 @@ const WatchPage = () => {
               </div>
             </div>
           </div>
-          <div className="video-desc bg-gray-100 my-4 rounded-lg py-2 px-3">
-            <div>
-              <span>{videoData[0]?.statistics?.viewCount} views </span>
-              <span>{videoData[0]?.snippet?.publishedAt}</span>
+          <div className="video-desc bg-gray-100 my-4 rounded-lg py-2 px-3 dark:bg-[#272727]">
+            <div className="text-sm dark:text-[#f1f1f1]">
+              <span className="font-bold">
+                {videoData[0]?.statistics?.viewCount} views{" "}
+              </span>
+              <span className="font-bold">
+                {videoData[0]?.snippet?.publishedAt}
+              </span>
 
               <p>{videoData[0]?.snippet?.localized?.description}</p>
             </div>
