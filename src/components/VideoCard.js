@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import moment from "moment";
 import { useSelector } from "react-redux";
+import { themeContext } from "../context/context";
 
 const VideoCard = ({ info }) => {
+  const value = useContext(themeContext);
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   console.log(info);
   const { snippet, statistics } = info;
@@ -58,7 +60,10 @@ const VideoCard = ({ info }) => {
             focusable="false"
             aria-hidden="true"
           >
-            <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+            <path
+              d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"
+              fill={`${value.darkMode ? "white" : ""}`}
+            ></path>
           </svg>
         </div>
       </div>

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AdContainer from "./AdContainer";
 import { GOOGLE_API_KEY } from "../utils/constants";
 import { Link } from "react-router-dom";
 import moment from "moment";
+import { themeContext } from "../context/context";
 
 const SuggestedVideos = ({ videoData }) => {
+  const value = useContext(themeContext);
   const [suggestedVd, setSuggestedVd] = useState([]);
 
   const videoTitle = videoData[0]?.snippet?.localized?.title;
@@ -52,11 +54,20 @@ const SuggestedVideos = ({ videoData }) => {
             JavaScript
           </button>
         </div>
-        <img
-          className="w-4"
-          src="https://cdn-icons-png.flaticon.com/512/130/130884.png"
-          alt=""
-        />
+        <svg
+          className="-rotate-90"
+          xmlns="http://www.w3.org/2000/svg"
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          focusable="false"
+          aria-hidden="true"
+        >
+          <path
+            d="m18 9.28-6.35 6.35-6.37-6.35.72-.71 5.64 5.65 5.65-5.65z"
+            fill={`${value.darkMode ? "white" : ""}`}
+          ></path>
+        </svg>
       </div>
 
       <div className="w-full">
@@ -86,11 +97,21 @@ const SuggestedVideos = ({ videoData }) => {
                 </div>
               </div>
 
-              <img
-                className="h-5"
-                src="https://www.svgrepo.com/show/345223/three-dots-vertical.svg"
-                alt=""
-              />
+              <div className="h-5">
+                <svg
+                  className="h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  enable-background="new 0 0 24 24"
+                  viewBox="0 0 24 24"
+                  focusable="false"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"
+                    fill={`${value.darkMode ? "white" : ""}`}
+                  ></path>
+                </svg>
+              </div>
             </div>
           </Link>
         ))}
