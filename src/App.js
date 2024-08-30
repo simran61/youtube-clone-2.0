@@ -8,6 +8,8 @@ import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
 import { useState } from "react";
 import { themeContext } from "./context/context";
+import { loaderContext } from "./context/context";
+import LoaderProvider from "./context/loaderProvider";
 
 const appRouter = createBrowserRouter([
   {
@@ -33,19 +35,21 @@ function App() {
   };
 
   return (
-    <themeContext.Provider value={{ darkMode }}>
-      <Provider store={store}>
-        <div className={`${darkMode && "dark"}`}>
-          <label class="switch fixed">
-            <input type="checkbox" onChange={toggleDarkMode} />
-            <span class="slider round"></span>
-          </label>
-          <Head />
-          <RouterProvider router={appRouter} />
-          <Body />
-        </div>
-      </Provider>
-    </themeContext.Provider>
+    <LoaderProvider>
+      <themeContext.Provider value={{ darkMode }}>
+        <Provider store={store}>
+          <div className={`${darkMode && "dark"}`}>
+            <label class="switch fixed">
+              <input type="checkbox" onChange={toggleDarkMode} />
+              <span class="slider round"></span>
+            </label>
+            <Head />
+            <RouterProvider router={appRouter} />
+            <Body />
+          </div>
+        </Provider>
+      </themeContext.Provider>
+    </LoaderProvider>
   );
 }
 

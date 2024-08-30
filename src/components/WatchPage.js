@@ -29,11 +29,11 @@ const WatchPage = () => {
       )}`
     );
     const data = await videoDetails.json();
-    setVideoData(data.items);
+    setVideoData(data.items || []);
   };
 
   console.log(videoData);
-  const channelId = videoData[0]?.snippet?.channelId;
+  const channelId = videoData?.[0]?.snippet?.channelId;
   console.log(channelId);
 
   const getChannelDetails = async () => {
@@ -41,7 +41,7 @@ const WatchPage = () => {
       `https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&key=${GOOGLE_API_KEY}&id=${channelId}`
     );
     const channelData = await channelDetails.json();
-    setChannelInfo(channelData.items);
+    setChannelInfo(channelData.items || []);
   };
 
   return (
