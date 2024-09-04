@@ -1,13 +1,17 @@
-const ChatMessage = ({ name, message }) => {
+import React from "react";
+
+const ChatMessage = ({ name, message, image }) => {
   return (
-    <div className="flex items-center shadow-sm p-2">
+    <div className="flex items-center p-0.5">
       <img
-        className="h-8"
-        alt="user"
-        src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png"
+        className="h-6 w-6 mr-2 object-cover rounded-full"
+        src={image}
+        alt=""
       />
-      <span className="font-bold px-2">{name}</span>
-      <span>{message}</span>
+      <div>
+        <span className="font-semibold text-[13px] pr-2">{name}</span>
+        <span className="text-[13px] leading-[4px]">{message}</span>
+      </div>
     </div>
   );
 };
