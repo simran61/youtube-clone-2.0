@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { loaderContext } from "../context/context";
-import Logo from "../assets/Logo";
+import Logo from "../assets/images/Logo";
 import Loader from "./Loader";
 import Hamburger from "../assets/icons/Hamburger";
 import Create from "../assets/icons/Create";
 import Notifications from "../assets/icons/Notifications";
-import userImg from "../assets/userImg.jpg";
+import userImg from "../assets/images/userImg.jpg";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const loaderValue = useContext(loaderContext);
@@ -30,7 +31,9 @@ const Head = () => {
           >
             <Hamburger />
           </div>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
         <SearchBar />
         <div className="flex items-center">

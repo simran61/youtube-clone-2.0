@@ -23,14 +23,17 @@ export const sidebarBasic = [
   {
     icon: <Home />,
     title: "Home",
+    url: "/",
   },
   {
     icon: <Shorts />,
     title: "Shorts",
+    url: "/",
   },
   {
     icon: <Subscriptions />,
     title: "Subscriptions",
+    url: "/",
   },
 ];
 
@@ -101,47 +104,38 @@ export const subscriptionList = [
 
 export const explore = [
   {
-    icon: <Trending />,
-    title: "Trending",
-  },
-  {
-    icon: <Shopping />,
-    title: "Shopping",
-  },
-  {
     icon: <Music />,
     title: "Music",
-  },
-  {
-    icon: <Movies />,
-    title: "Movies",
-  },
-  {
-    icon: <Live />,
-    title: "Live",
+    url: "/?v=10",
   },
   {
     icon: <Gaming />,
     title: "Gaming",
+    url: "/?v=20",
   },
   {
     icon: <News />,
     title: "News",
+    url: "/?v=25",
   },
   {
     icon: <Sports />,
     title: "Sports",
+    url: "/?v=17",
   },
   {
     icon: <Courses />,
-    title: "Courses",
+    title: "Technology",
+    url: "/?v=28",
   },
   {
     icon: <Fashion />,
     title: "Fashion & Beauty",
+    url: "/?v=26",
   },
   {
     icon: <Podcasts />,
-    title: "Podcasts",
+    title: "Blogs",
+    url: "/?v=22",
   },
 ];
