@@ -8,7 +8,6 @@ const VideoCard = ({ info }) => {
 
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails, publishedAt, channelId } = snippet;
-  const { viewCount } = statistics;
 
   const channelInfo = useChannelDetails(channelId);
 
@@ -35,9 +34,11 @@ const VideoCard = ({ info }) => {
             {channelTitle}
           </h3>
           <div>
-            <span className="text-[#606060] text-sm dark:text-[#aaaaaa]">
-              {calculateNumber(viewCount)} views •{" "}
-            </span>
+            {statistics?.viewCount && (
+              <span className="text-[#606060] text-sm dark:text-[#aaaaaa]">
+                {calculateNumber(statistics?.viewCount)} views •{" "}
+              </span>
+            )}
             <span className="text-[#606060] text-sm dark:text-[#aaaaaa]">
               {publishedDate(publishedAt)}
             </span>

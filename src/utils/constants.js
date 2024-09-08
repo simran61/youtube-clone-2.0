@@ -9,3 +9,5 @@ export const YOUTUBE_VIDEOS_CATEGORY = `https://youtube.googleapis.com/youtube/v
 export const VIDEO_DETAILS = `https://www.googleapis.com/youtube/v3/videos?key=${process.env.REACT_APP_API_KEY}&part=snippet,statistics&id=`;
 
 export const CHANNEL_INFO = `https://www.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&key=${process.env.REACT_APP_API_KEY}&id=`;
+
+export const LIVE_VIDEOS = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&eventType=live&type=video&regionCode=IN&maxResults=50&key=${process.env.REACT_APP_API_KEY}`;

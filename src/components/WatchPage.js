@@ -29,7 +29,7 @@ const WatchPage = () => {
       </div>
 
       <div className="watch-page-right">
-        <LiveChat />
+        {videoData?.snippet?.liveBroadcastContent === "live" && <LiveChat />}
         <SuggestedVideos videoData={videoData} />
       </div>
     </div>

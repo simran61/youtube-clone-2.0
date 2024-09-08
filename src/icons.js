@@ -104,6 +104,11 @@ export const subscriptionList = [
 
 export const explore = [
   {
+    icon: <Live />,
+    title: "Live",
+    url: "/?v=live",
+  },
+  {
     icon: <Music />,
     title: "Music",
     url: "/?v=10",

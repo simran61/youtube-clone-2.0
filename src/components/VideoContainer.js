@@ -18,11 +18,18 @@ const VideoContainer = () => {
       }`}
     >
       <AdVideo />
-      {videoList.map((video) => (
-        <Link key={video.id} to={"/watch?v=" + video.id}>
-          <VideoCard info={video} />
-        </Link>
-      ))}
+      {videoList.map((video) => {
+        let videoUrlId;
+        if (video?.snippet?.liveBroadcastContent === "none")
+          videoUrlId = video?.id;
+        else videoUrlId = video?.id?.videoId;
+
+        return (
+          <Link key={video.id} to={`/watch?v=${videoUrlId}`}>
+            <VideoCard info={video} />
+          </Link>
+        );
+      })}
     </div>
   );
 };
