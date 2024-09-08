@@ -1,5 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { YOUTUBE_VIDEOS_API, YOUTUBE_VIDEOS_CATEGORY } from "./constants";
+import {
+  LIVE_VIDEOS,
+  YOUTUBE_VIDEOS_API,
+  YOUTUBE_VIDEOS_CATEGORY,
+} from "./constants";
 import { loaderContext } from "../context/context";
 import { useSearchParams } from "react-router-dom";
 
@@ -18,7 +22,9 @@ const useVideoList = () => {
     try {
       loaderValue.setLoader(true);
       let data;
-      if (videoCategory) {
+
+      if (videoCategory === "live") data = await fetch(LIVE_VIDEOS);
+      else if (videoCategory) {
         data = await fetch(YOUTUBE_VIDEOS_CATEGORY + videoCategory);
       } else data = await fetch(YOUTUBE_VIDEOS_API);
 
