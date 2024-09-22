@@ -13,10 +13,12 @@ const VideoCard = ({ info }) => {
 
   return (
     <div
-      className={`mx-2 my-6 mb-12 ${isMenuOpen ? "w-[296px]" : "w-[267px]"}`}
+      className={`mx-2 my-6 mb-12 ${
+        isMenuOpen ? "w-[399.71px]" : "w-[337.79px]"
+      }`}
     >
       <img
-        className="rounded-xl hover:rounded-none"
+        className="rounded-xl hover:rounded-none w-full"
         src={thumbnails.medium.url}
         alt="video-thumbnail"
       />

@@ -14,7 +14,7 @@ const VideoContainer = () => {
   ) : (
     <div
       className={`overflow-hidden w-full mt-14 grid grid-flow-row ${
-        isMenuOpen ? "grid-cols-4" : "grid-cols-5"
+        isMenuOpen ? "grid-cols-3" : "grid-cols-4"
       }`}
     >
       <AdVideo />

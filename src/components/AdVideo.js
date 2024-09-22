@@ -10,7 +10,9 @@ const AdVideo = () => {
 
   return (
     <Link to="https://www.youtube.com/watch?v=5XxIwPKMlek">
-      <div className={`mx-2 my-6 ${isMenuOpen ? "w-[296px]" : "w-[267px]"}`}>
+      <div
+        className={`mx-2 my-6 ${isMenuOpen ? "w-[399.71px]" : "w-[337.79px]"}`}
+      >
         <img
           className="rounded-xl hover:rounded-none"
           src={adVideoBanner}
@@ -40,10 +42,18 @@ const AdVideo = () => {
           <DotsMenu />
         </div>
         <div className="flex justify-between py-1">
-          <button className="w-[142px] p-2 rounded-3xl border text-[#3EA6FF] font-medium text-sm dark:border-zinc-700">
+          <button
+            className={`${
+              isMenuOpen ? "w-[172px]" : "w-[142px]"
+            } p-2.5 rounded-3xl border text-[#3EA6FF] font-medium text-sm dark:border-zinc-700`}
+          >
             Watch
           </button>
-          <button className="w-[142px] p-2 rounded-3xl bg-blue-100 text-[#3EA6FF] font-medium text-sm dark:bg-[#263850]">
+          <button
+            className={`${
+              isMenuOpen ? "w-[172px]" : "w-[142px]"
+            }  p-2.5 rounded-3xl bg-blue-100 text-[#3EA6FF] font-medium text-sm dark:bg-[#263850]`}
+          >
             Create Now
           </button>
         </div>
