@@ -14,13 +14,16 @@ const Video = ({ videoData, channelInfo }) => {
         style={{ borderRadius: "15px" }}
         width="914"
         height="514"
-        src={"https://www.youtube.com/embed/" + searchParams.get("v")}
+        src={`https://www.youtube.com/embed/${searchParams.get(
+          "v"
+        )}?autoplay=1`}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
+
       <div>
         <h1 className="font-bold text-xl my-3 dark:text-[#f1f1f1]">
           {videoData?.snippet?.localized?.title}
