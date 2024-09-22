@@ -28,11 +28,13 @@ export const sidebarBasic = [
   {
     icon: <Shorts />,
     title: "Shorts",
+    // url: "/v=shorts",
     url: "/",
   },
   {
     icon: <Subscriptions />,
     title: "Subscriptions",
+    // url: "/v=subscriptions",
     url: "/",
   },
 ];
@@ -67,7 +69,7 @@ export const sidebarYou = [
 export const subscriptionList = [
   {
     avatar:
-      "https://yt3.ggpht.com/ytc/AIdro_md2CfeGP7cDguRmrpRdM3a1r_gOniMzennD6141VLFw70=s88-c-k-c0x00ffffff-no-rj",
+      "https://yt3.googleusercontent.com/ytc/AIdro_md2CfeGP7cDguRmrpRdM3a1r_gOniMzennD6141VLFw70=s900-c-k-c0x00ffffff-no-rj",
     name: "Akshay Saini",
   },
   {
@@ -104,43 +106,50 @@ export const subscriptionList = [
 
 export const explore = [
   {
-    icon: <Live />,
-    title: "Live",
-    url: "/?v=live",
-  },
-  {
     icon: <Music />,
+    id: "10",
     title: "Music",
     url: "/?v=10",
   },
   {
     icon: <Gaming />,
+    id: "20",
     title: "Gaming",
     url: "/?v=20",
   },
   {
     icon: <News />,
+    id: "25",
     title: "News",
     url: "/?v=25",
   },
   {
     icon: <Sports />,
+    id: "17",
     title: "Sports",
     url: "/?v=17",
   },
   {
     icon: <Courses />,
+    id: "28",
     title: "Technology",
     url: "/?v=28",
   },
   {
     icon: <Fashion />,
+    id: "26",
     title: "Fashion & Beauty",
     url: "/?v=26",
   },
   {
     icon: <Podcasts />,
+    id: "22",
     title: "Blogs",
     url: "/?v=22",
+  },
+  {
+    icon: <Live />,
+    title: "Live",
+    url: "/?v=live",
   },
 ];

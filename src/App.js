@@ -9,6 +9,7 @@ import WatchPage from "./components/WatchPage";
 import { useState } from "react";
 import { themeContext } from "./context/context";
 import LoaderProvider from "./context/loaderProvider";
+import SearchedVideoList from "./components/SearchedVideoList";
 
 const appRouter = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <MainContainer />,
+      },
+      {
+        path: "search",
+        element: <SearchedVideoList />,
       },
       {
         path: "watch",

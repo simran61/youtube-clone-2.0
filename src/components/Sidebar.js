@@ -2,9 +2,10 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Dropdown from "../assets/icons/Dropdown";
 import { sidebarBasic, sidebarYou, subscriptionList, explore } from "../icons";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Sidebar = () => {
+  const [searchParams] = useSearchParams();
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   if (!isMenuOpen) return null;
 
@@ -25,7 +26,15 @@ const Sidebar = () => {
       <ul className="text-sm dark:text-[#f1f1f1]">
         {explore.map((explore, index) => (
           <Link to={explore.url} key={index}>
-            <li className="px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]">
+            <li
+              className={
+                explore.title === "Live" && searchParams.get("v") === "live"
+                  ? "px-3 h-10 w-[204px] flex items-center bg-gray-100 rounded-lg dark:bg-[#272727]"
+                  : searchParams.get("v") === explore.id
+                  ? "px-3 h-10 w-[204px] flex items-center bg-gray-100 rounded-lg dark:bg-[#272727]"
+                  : "px-3 h-10 w-[204px] flex items-center hover:bg-gray-100 rounded-lg dark:hover:bg-[#272727]"
+              }
+            >
               {explore.icon}
               {explore.title}
             </li>

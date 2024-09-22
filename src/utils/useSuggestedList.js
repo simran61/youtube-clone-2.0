@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 
-const useSuggestedList = ({ videoData }) => {
+const useSuggestedList = (videoTitle, isInitialSearch = true) => {
   const [suggestedVideo, setSuggestedVideo] = useState([]);
-  const videoTitle = videoData?.snippet?.title;
 
   useEffect(() => {
-    if (videoTitle) suggestedData(videoTitle);
+    if (videoTitle && isInitialSearch) fetchSuggestedData(videoTitle);
   }, [videoTitle]);
 
-  const suggestedData = async (videoTitle) => {
+  const fetchSuggestedData = async (videoTitle) => {
     try {
       const suggestedUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=15&q=${encodeURIComponent(
         videoTitle
@@ -21,7 +20,7 @@ const useSuggestedList = ({ videoData }) => {
     }
   };
 
-  return suggestedVideo;
+  return { suggestedVideo, fetchSuggestedData };
 };
 
 export default useSuggestedList;

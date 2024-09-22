@@ -6,7 +6,8 @@ import SuggestedVideoCard from "./SuggestedVideoCard";
 import useSuggestedList from "../utils/useSuggestedList";
 
 const SuggestedVideos = ({ videoData }) => {
-  const suggestedVideo = useSuggestedList({ videoData });
+  const videoTitle = videoData?.snippet?.title;
+  const { suggestedVideo } = useSuggestedList(videoTitle);
 
   return (
     <>

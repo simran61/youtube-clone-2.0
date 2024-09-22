@@ -263,21 +263,25 @@ var images = [
 ];
 
 export const btnList = [
-  {
-    btnName: "All",
-    url: "/",
-  },
+  // {
+  //   btnName: "All",
+  //   id: "",
+  //   url: "/",
+  // },
   {
     btnName: "Auto & Vehicles",
+    id: "2",
     url: "/?v=2",
   },
 
   {
     btnName: "Music",
+    id: "10",
     url: "/?v=10",
   },
   {
     btnName: "Pets & Animals",
+    id: "15",
     url: "/?v=15",
   },
   {
